@@ -37,7 +37,7 @@ namespace ExtensionAssociation
             BaseKey = Registry.CurrentUser.CreateSubKey(Extension);
             BaseKey.SetValue("", KeyName);
 
-            OpenMethod = Registry.ClassesRoot.CreateSubKey(KeyName);
+            OpenMethod = Registry.CurrentUser.CreateSubKey(KeyName);
             OpenMethod.SetValue("", FileDescription);
             OpenMethod.CreateSubKey("DefaultIcon").SetValue("", "C:\\Users\\upret\\Downloads\\o.ico");
             Shell = OpenMethod.CreateSubKey("Shell");
